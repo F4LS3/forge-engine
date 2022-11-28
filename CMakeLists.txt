@@ -55,12 +55,12 @@ add_library(Forge SHARED ${SOURCES})
 target_precompile_headers(Forge PUBLIC src/forgepch.h)
 
 # Add subdirectories
-add_subdirectory(vendors/glfw)
-add_subdirectory(vendors/spdlog)
+add_subdirectory(libraries/glfw)
+add_subdirectory(libraries/spdlog)
 
 # Include libraries
-include_directories(vendors/glfw/include)
-include_directories(vendors/spdlog/include)
+include_directories(libraries/glfw/include)
+include_directories(libraries/spdlog/include)
 
 # Link libraries
 target_link_libraries(Forge glfw ${GLFW_LIBRARIES})
